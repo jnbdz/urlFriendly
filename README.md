@@ -6,14 +6,10 @@ Clean a string to make it friendly for the URL.
 How to use
 ----------
 
-var CleanString = urlFriendly();
+var string = urlFriendly("Hello World!");
 
-CleanString.escape("string");
+string.escape(); // Hello%20World%21
 
 OR
 
-CleanString.humanReadable("string");
-
-The "escape" method is the same as using the normal JavaScript function escape.
-
-The "humanReadable" method you get s string that is easier to read than the escape option.
+string.humanReadable(); // hello-world
