@@ -18,12 +18,20 @@ provides:
 
 var urlFriendly = new Class({
 
-                escape: function(val){
-                        return escape(val);
+		initialize: function(val){
+
+			this.val = val;
+
+		},
+
+                escape: function(){
+
+                        return escape(this.val);
                 },
 
-                humanReadable: function(val){
-                        return val
+                humanReadable: function(){
+
+                        return this.val
                         .toLowerCase()
                         .replace(/^\s+|\s+$/g, "") // trim leading and trailing spaces
                         .replace(/[_|\s]+/g, "-") // change all spaces and underscores to a hyphen
